@@ -1,0 +1,364 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary_color: #fff;
+  --secondary_color: #000;
+  /* --grey: #ebecf0; */
+  --btnbgcolor: #ffa500;
+  --mobilefont: 0.7rem;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: bolder;
+}
+
+/* utility classes */
+a {
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  color: var(--primary_color);
+  color: var(--primary_color);
+}
+.btn_large {
+  text-decoration: none;
+  padding: 0.4rem 0.2rem;
+  color: var(--primary_color);
+  width: 70%;
+  vertical-align: middle;
+  background-color: var(--btnbgcolor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn_large:hover,
+.btn_small:hover {
+  transition: background-color 1s;
+  cursor: pointer;
+  opacity: 0.8;
+}
+.btn_small {
+  text-decoration: none;
+  padding: 0.4rem 0.2rem;
+  color: var(--primary_color);
+  width: 60%;
+  vertical-align: middle;
+  background-color: var(--btnbgcolor);
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+span {
+  font-size: 2rem;
+  font-weight: 300;
+}
+.span_bold {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+/* STYLING FOR HERO PAGE SECTION */
+
+.hero_page {
+  /* border: 2px solid red; */
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(../assets/images/sea-water-ocean-people-sky-boat-646921-pxhere.com.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.navbar {
+  /* border: 2px solid red; */
+  height: 15%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.navbar_left {
+  height: 80%;
+  /* border: 1px solid yellow; */
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar_left img {
+  height: 50%;
+  width: 50%;
+  /* border: 1px solid black; */
+  object-fit: cover;
+}
+.navbar_middle {
+  height: 80%;
+  /* border: 1px solid yellow; */
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.navbar_right {
+  height: 80%;
+  /* border: 1px solid yellow; */
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* STYLING FOR HERO CONTAINER */
+/* utility class for hero container */
+
+.padding_left {
+  padding-left: 7rem;
+}
+/* utility class for hero container closed */
+
+.hero_container {
+  padding-top: 6rem;
+  /* border: 2px solid blue; */
+  /* height: 65%; */
+  color: var(--primary_color);
+}
+
+.hero_container p {
+  /* border: 2px solid red; */
+  width: 45%;
+}
+.hero_container h1 {
+  width: 50%;
+  /* border: 2px solid red; */
+}
+
+.hero_btn_container {
+  width: 35%;
+  margin-top: 2rem;
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  /* flex-wrap: wrap; */
+}
+.btn_primary {
+  /* border: 1px solid black; */
+}
+.btn_secondary {
+  /* border: 1px solid black; */
+  margin-left: 1rem;
+  background: transparent;
+}
+
+/* STYLING FOR CARDPAGE SECTION */
+
+/* utility class for cardpage section */
+
+.card_page_utility_padding {
+  padding: 0rem 1rem;
+}
+.card_page_container {
+  margin-top: 0rem;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../assets/images/sea-water-ocean-people-sky-boat-646921-pxhere.com.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.card_page_container_description_container {
+  /* border: 1px solid blue; */
+  width: 60%;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: var(--primary_color);
+}
+
+.card_container {
+  /* border: 2px solid red; */
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.cards {
+  height: 60vh;
+  width: 26vw;
+  /* border: 2px solid blue; */
+  padding: 1rem 1rem 0rem 1rem;
+  background-color: var(--primary_color);
+}
+.image_container {
+  height: 40%;
+  width: 100%;
+}
+.image_container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.cards h4 {
+  text-align: center;
+  padding: 1rem 0rem;
+}
+.cards p {
+  text-align: center;
+  padding: 0rem 0rem 1rem 0rem;
+}
+.card_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* MEDIAQUERIES */
+
+@media only screen and (max-width: 1024px) {
+  /* FOR HOMEPAGESECTION */
+
+  .navbar {
+    font-size: 1.2rem;
+  }
+  .navbar_left {
+    flex: 0.5;
+    justify-content: center;
+  }
+  .navbar_left a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .navbar_left img {
+    height: 50%;
+    width: 50%;
+    border: 1px solid black;
+    object-fit: cover;
+  }
+  .navbar_middle {
+    flex: 3;
+  }
+  .navbar_right {
+    flex: 1;
+  }
+
+  /* FOR HERO CONTAINER */
+
+  .hero_container {
+    font-size: 2rem;
+  }
+
+  .hero_container p {
+    margin-top: 0.5rem;
+    width: 70%;
+  }
+  .hero_container h1 {
+    margin-top: 2rem;
+    width: 65%;
+    font-size: 3rem;
+  }
+
+  .hero_btn_container {
+    width: 55%;
+    font-size: 1.2rem;
+    /* flex-wrap: wrap; */
+  }
+
+  /* FOR CARDPAGE */
+  .card_page_container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .cards {
+    height: 32vh;
+    width: 26vw;
+    padding: 1rem 1rem 0rem 1rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* utility */
+  .padding_left {
+    padding-left: 5rem;
+  }
+
+  /* utility closed */
+
+  .navbar {
+    font-size: 1rem;
+  }
+
+  /* FOR HERO CONTAINER */
+
+  .hero_container {
+    font-size: 1.5rem;
+  }
+
+  .hero_container p {
+    margin-top: 0.5rem;
+    width: 80%;
+  }
+  .hero_container h1 {
+    margin-top: 2rem;
+    width: 75%;
+    font-size: 3rem;
+  }
+
+  .hero_btn_container {
+    width: 55%;
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  /* utility */
+  .padding_left {
+    padding-left: 2rem;
+  }
+
+  /* utility closed */
+
+  .navbar {
+    font-size: 1rem;
+  }
+
+  /* FOR HERO CONTAINER */
+
+  .hero_container {
+    font-size: unset;
+  }
+
+  .hero_container p {
+    margin-top: unset;
+    width: 90%;
+  }
+  .hero_container h1 {
+    margin-top: unset;
+    width: 90%;
+    font-size: 1.5rem;
+  }
+
+  .hero_btn_container {
+    width: 80%;
+    font-size: 0.7rem;
+  }
+}
