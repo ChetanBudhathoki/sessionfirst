@@ -7,16 +7,16 @@
 :root {
   --primary_color: #fff;
   --secondary_color: #000;
-  /* --grey: #ebecf0; */
-  --btnbgcolor: #ffa500;
+  --btnbgcolor: #fc873f;
   --mobilefont: 0.7rem;
+  --greyshade: #f1f0e9;
 }
 html {
   scroll-behavior: smooth;
 }
 body {
   font-family: "Poppins", sans-serif;
-  font-weight: bolder;
+  font-weight: bold;
 }
 
 /* utility classes */
@@ -25,18 +25,18 @@ a {
   text-decoration: none;
   border: none;
   color: var(--primary_color);
-  color: var(--primary_color);
+  display: inline-block;
 }
 .btn_large {
   text-decoration: none;
-  padding: 0.4rem 0.2rem;
+  padding: 0.5rem;
   color: var(--primary_color);
-  width: 70%;
   vertical-align: middle;
   background-color: var(--btnbgcolor);
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 0.8rem;
 }
 .btn_large:hover,
 .btn_small:hover {
@@ -44,17 +44,19 @@ a {
   cursor: pointer;
   opacity: 0.8;
 }
+
 .btn_small {
   text-decoration: none;
-  padding: 0.4rem 0.2rem;
+  padding: 0.5rem;
   color: var(--primary_color);
-  width: 60%;
   vertical-align: middle;
   background-color: var(--btnbgcolor);
   transition: background-color 0.3s;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid var(--btnbgcolor);
+  font-size: 0.8rem;
 }
 
 span {
@@ -66,20 +68,20 @@ span {
   font-size: 2rem;
 }
 
+/* UTILITY CLASSES CLOSED */
+
 /* STYLING FOR HERO PAGE SECTION */
 
 .hero_page {
-  /* border: 2px solid red; */
   height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url(../assets/images/sea-water-ocean-people-sky-boat-646921-pxhere.com.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../assets/images/seasship.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 .navbar {
-  /* border: 2px solid red; */
   height: 15%;
   display: flex;
   align-items: center;
@@ -88,7 +90,6 @@ span {
 }
 .navbar_left {
   height: 80%;
-  /* border: 1px solid yellow; */
   flex: 1;
   display: flex;
   align-items: center;
@@ -97,21 +98,24 @@ span {
 .navbar_left img {
   height: 50%;
   width: 50%;
-  /* border: 1px solid black; */
   object-fit: cover;
 }
 .navbar_middle {
   height: 80%;
-  /* border: 1px solid yellow; */
-  flex: 2;
+  flex: 3;
+  display: flex;
+  align-items: center;
+}
+.navbar_middle ul {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  list-style: none;
   flex-wrap: wrap;
 }
 .navbar_right {
   height: 80%;
-  /* border: 1px solid yellow; */
   flex: 1;
   display: flex;
   align-items: center;
@@ -127,35 +131,29 @@ span {
 /* utility class for hero container closed */
 
 .hero_container {
-  padding-top: 6rem;
-  /* border: 2px solid blue; */
-  /* height: 65%; */
+  height: 85%;
   color: var(--primary_color);
+  display: flex;
+  align-items: center;
 }
 
 .hero_container p {
-  /* border: 2px solid red; */
   width: 45%;
 }
 .hero_container h1 {
   width: 50%;
-  /* border: 2px solid red; */
 }
 
 .hero_btn_container {
-  width: 35%;
+  width: 45%;
   margin-top: 2rem;
-  /* border: 2px solid red; */
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  /* flex-wrap: wrap; */
 }
-.btn_primary {
-  /* border: 1px solid black; */
-}
+
 .btn_secondary {
-  /* border: 1px solid black; */
+  border: 1px solid #e9ebeb;
   margin-left: 1rem;
   background: transparent;
 }
@@ -167,28 +165,41 @@ span {
 .card_page_utility_padding {
   padding: 0rem 1rem;
 }
+
+/* utility class for cardpage section closed */
+
 .card_page_container {
   margin-top: 0rem;
+  /* padding-top: 2rem; */
   height: 100vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(../assets/images/sea-water-ocean-people-sky-boat-646921-pxhere.com.jpg);
+    url(../assets/images/seawater.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 .card_page_container_description_container {
-  /* border: 1px solid blue; */
   width: 60%;
-  margin: 2rem auto;
+  margin: 0rem auto;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   color: var(--primary_color);
 }
+.card_page_container_description_container h2 {
+  margin-bottom: 1rem;
+}
+.card_page_container_description_container p {
+  font-size: 0.8rem;
+}
 
 .card_container {
-  /* border: 2px solid red; */
   width: 90%;
   margin: 0 auto;
   display: flex;
@@ -203,6 +214,12 @@ span {
   /* border: 2px solid blue; */
   padding: 1rem 1rem 0rem 1rem;
   background-color: var(--primary_color);
+}
+
+.cards p {
+  font-size: 0.8rem;
+
+  /* letter-spacing: 0.5; */
 }
 .image_container {
   height: 40%;
@@ -221,12 +238,55 @@ span {
   text-align: center;
   padding: 0rem 0rem 1rem 0rem;
 }
+.cards .btn_small {
+  padding: 0.5rem 2rem;
+}
 .card_btn {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 80%;
   margin: 0 auto;
+}
+
+/* STYLING FOR THE PILOT PAGE SECTION */
+
+.outdoor_page {
+  height: 66vh;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.item_left_box {
+  height: 100%;
+  flex: 1.2;
+}
+.item_left_box img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.item_right_box {
+  height: 100%;
+  flex: 1;
+  padding: 4rem 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: var(--greyshade);
+}
+
+.item_right_box h2 {
+  margin-top: 0.8rem;
+}
+.item_right_box p,
+.item_right_box .outdoor_btn {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+}
+.outdoor_btn {
+  display: flex;
+  align-items: center;
 }
 
 /* MEDIAQUERIES */
@@ -262,7 +322,7 @@ span {
   /* FOR HERO CONTAINER */
 
   .hero_container {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .hero_container p {
@@ -277,7 +337,7 @@ span {
 
   .hero_btn_container {
     width: 55%;
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
     /* flex-wrap: wrap; */
   }
 
@@ -293,6 +353,30 @@ span {
     width: 26vw;
     padding: 1rem 1rem 0rem 1rem;
   }
+
+
+/* FOR PILOTS PAGE */
+
+
+
+.outdoor_page{
+  height: 48vh;
+}
+
+.outdoor_page .item_right_box{
+  padding: 3rem 3rem;
+}
+
+.item_right_box h2 {
+  margin-top: unset;
+}
+.item_right_box p,
+.item_right_box .outdoor_btn {
+
+  margin-top: unset;
+  font-size: 1rem;
+}
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -325,7 +409,7 @@ span {
 
   .hero_btn_container {
     width: 55%;
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
   }
 }
 
