@@ -17,7 +17,7 @@ html {
 }
 body {
   font-family: "Poppins", sans-serif;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 /* utility classes */
@@ -38,7 +38,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.7rem;
+  font-size: 0.8em;
 }
 .btn_large:hover,
 .btn_small:hover {
@@ -58,7 +58,7 @@ a {
   align-items: center;
   justify-content: center;
   border: 1px solid var(--btnbgcolor);
-  font-size: 0.7rem;
+  font-size: 0.8em;
 }
 
 span {
@@ -76,7 +76,7 @@ span {
 
 .hero_page {
   height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
     url(../assets/images/seasship.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -84,6 +84,7 @@ span {
 }
 
 .navbar {
+  padding: 0rem 5rem;
   height: 15%;
   display: flex;
   align-items: center;
@@ -95,7 +96,7 @@ span {
   flex: 1;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 .navbar_left img {
   height: 50%;
@@ -104,7 +105,7 @@ span {
 }
 .navbar_middle {
   height: 80%;
-  flex: 3;
+  flex: 2;
   display: flex;
   align-items: center;
 }
@@ -121,7 +122,7 @@ span {
   flex: 1;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 /* STYLING FOR HERO CONTAINER */
@@ -144,6 +145,8 @@ span {
 }
 .hero_container h1 {
   width: 50%;
+  font-size: 3em;
+  line-height: 1.2;
 }
 
 .hero_btn_container {
@@ -171,9 +174,7 @@ span {
 /* utility class for cardpage section closed */
 
 .card_page_container {
-  margin-top: 0rem;
-  /* padding-top: 2rem; */
-  height: 100vh;
+  padding: 2rem 0rem;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(../assets/images/seawater.jpg);
   background-repeat: no-repeat;
@@ -205,28 +206,24 @@ span {
   width: 90%;
   margin: 0 auto;
   display: flex;
-  align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
 .cards {
-  height: 60vh;
-  width: 26vw;
-  /* border: 2px solid blue; */
-  padding: 1rem 1rem 0rem 1rem;
+  margin: 2rem 0rem;
+  width: 340px;
+  padding: 1rem 1rem 1rem 1rem;
   background-color: var(--primary_color);
+  height: fit-content;
 }
 
 .cards p {
   font-size: 0.8rem;
 }
-.image_container {
-  height: 40%;
-  width: 100%;
-}
+
 .image_container img {
-  height: 100%;
+  height: 50%;
   width: 100%;
   object-fit: cover;
 }
@@ -253,10 +250,11 @@ span {
 
 .feature_page {
   background-color: #f9f9f6;
-  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 2rem 0rem;
+  padding: 6rem 0rem;
 }
 
 .feature_page h2 {
@@ -266,10 +264,14 @@ span {
 .features_box {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+}
+.features_box .dash {
+  margin: 0.2em;
 }
 
 .feature_box_item {
-  width: 15vw;
+  width: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -285,24 +287,19 @@ span {
   font-size: 0.8rem;
 }
 .feature_box_item img {
-  height: 4rem;
-}
-
-.feature_page hr {
-  border: 2px dotted var(--greyshadeborder);
-  width: 5vw;
+  height: 4em;
 }
 
 /* STYLING FOR THE OUTDOOR PAGE SECTION */
 
 .outdoor_page {
-  height: 66vh;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  background-color: var(--greyshade);
 }
 .item_left_box {
-  height: 100%;
+  /* height: 700px; */
   flex: 1.2;
 }
 .item_left_box img {
@@ -349,7 +346,6 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 .contact_page {
-  /* border: 2px solid red; */
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(../assets/images/seacost.jpg);
   background-repeat: no-repeat;
@@ -436,7 +432,8 @@ input:focus {
 /* STYLING FOR FOOTER SECTION */
 
 footer {
-  height: 50vh;
+  /* height: 50vh; */
+  padding: 4rem 0rem;
   border: 2px solid black;
   background-color: #041334;
   display: flex;
@@ -449,7 +446,7 @@ footer {
 
 .footer_child {
   /* border: 2px solid yellow; */
-  width: 22vw;
+  /* width: 22vw; */
   height: 60%;
   display: flex;
   flex-direction: column;
@@ -554,28 +551,22 @@ footer {
     flex-direction: column;
     justify-content: center;
   }
-  .cards {
-    height: 32vh;
-    width: 26vw;
-    padding: 1rem 1rem 0rem 1rem;
+
+  /* STYLING FOR FEATURES PAGE SECTION */
+
+  .feature_box_item {
+    margin: 0.5rem;
   }
 
   /* FOR OUTDOOR PAGE */
-
-  .outdoor_page {
-    height: 48vh;
-  }
 
   .outdoor_page .item_right_box {
     padding: 3rem 3rem;
   }
 
-  .item_right_box h2 {
-    margin-top: unset;
-  }
   .item_right_box p,
   .item_right_box .outdoor_btn {
-    margin-top: unset;
+    /* margin-top: unset; */
     font-size: 1rem;
   }
 }
@@ -590,6 +581,7 @@ footer {
 
   .navbar {
     font-size: 1rem;
+    padding: 0rem 3rem;
   }
 
   /* FOR HERO CONTAINER */
