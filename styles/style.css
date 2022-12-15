@@ -7,7 +7,7 @@
 :root {
   --primary_color: #fff;
   --secondary_color: #000;
-  --btnbgcolor: #FC873F;
+  --btnbgcolor: #fc873f;
   --mobilefont: 0.7rem;
   --greyshade: #f1f0e9;
   --greyshadeborder: #7d7d7d;
@@ -18,7 +18,7 @@ html {
 body {
   /* font-family: "Poppins", sans-serif; */
   font-weight: 400;
-  font-family:"Montserrat",ubuntu;
+  font-family: "Montserrat", ubuntu;
 }
 
 /* utility classes */
@@ -49,9 +49,7 @@ a {
   transition: background-color 1s;
   cursor: pointer;
   /* opacity: 0.8; */
-  background-color: #F17022;
-
-  
+  background-color: #f17022;
 }
 
 .btn_small {
@@ -68,9 +66,8 @@ a {
   align-items: center;
   justify-content: center;
   /* border: 1px solid var(--btnbgcolor); */
-  font-size: 1em; 
-   /* border: 1px solid var(--btnbgcolor); */
-
+  font-size: 1em;
+  /* border: 1px solid var(--btnbgcolor); */
 }
 
 span {
@@ -104,6 +101,9 @@ span {
   flex-direction: row;
   flex-wrap: wrap;
 }
+.menubar {
+  display: none;
+}
 .navbar_left {
   /* border: 2px solid red; */
   height: 80%;
@@ -132,10 +132,10 @@ span {
   justify-content: space-evenly;
   list-style: none;
   flex-wrap: wrap;
-
 }
-.navbar_middle ul a{
+.navbar_middle ul a {
   font-size: 1rem;
+  font-weight: 400;
 }
 .navbar_right {
   height: 80%;
@@ -158,20 +158,27 @@ span {
   color: var(--primary_color);
   display: flex;
   align-items: center;
+  justify-content: center;
+  /* border: 2px solid red; */
 }
 
 .hero_container p {
-  width: 45%;
+  width: 65%;
+  font-weight: 300;
+  line-height: 1.5;
+  padding: 1% 15% 1% 15%;
 }
 .hero_container h1 {
-  width: 50%;
+  width: 55%;
   font-size: 3em;
-  line-height: 1.2;
+  line-height: 1.1;
+  font-weight: 500;
+  word-spacing: 0.1em;
 }
 
 .hero_btn_container {
   width: 45%;
-  margin-top: 2rem;
+  margin-top: 1rem;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -181,12 +188,11 @@ span {
   margin-left: 1rem;
   background: transparent;
 }
-.btn_secondary .btn_small{
+.btn_secondary .btn_small {
   background: transparent;
   border: 1px solid #e9ebeb;
-
 }
-.btn_secondary .btn_small:hover{
+.btn_secondary .btn_small:hover {
   opacity: 0.8;
 }
 
@@ -231,7 +237,6 @@ span {
 .card_page_container_description_container p {
   font-size: 1rem;
   margin: 0.2em 0em;
-
 }
 
 .card_container {
@@ -251,12 +256,19 @@ span {
   width: 32%;
   padding: 1rem 1rem 1rem 1rem;
   background-color: var(--primary_color);
-  height: fit-content;
+  /* height: fit-content; */
   /* margin: 20px 20px 0px 0px; */
+  min-height: 366px;
 }
 
 .cards p {
   font-size: 0.9rem;
+  max-height: 54px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
 }
 
 .image_container img {
@@ -270,7 +282,6 @@ span {
   font-size: 1.3rem;
   font-weight: 600;
   letter-spacing: 0.04em;
-
 }
 .cards p {
   text-align: center;
@@ -287,9 +298,9 @@ span {
   width: 80%;
   margin: 0 auto;
 }
-.card_btn .btn_small{
+.card_btn .btn_small {
   /* border: 2px solid red; */
-  min-width:200px;
+  min-width: 200px;
 }
 
 /* STYLING FOR FEATURES PAGE SECTION */
@@ -303,7 +314,7 @@ span {
   /* margin: 2rem 0rem; */
   padding: 8% 10%;
 }
-.feature_page_container{
+.feature_page_container {
   /* border: 2px solid orangered; */
   width: 100%;
 }
@@ -318,23 +329,33 @@ span {
   /* border: 2px solid blue; */
   display: flex;
   /* align-items: center; */
-  justify-content: space-around;
-  flex-wrap: wrap;
+  /* justify-content: space-around; */
+  /* flex-wrap: wrap; */
   /* min-width: 100%; */
-
+  /* width: 500px; */
+  /* height: 500px; */
+  overflow: scroll;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+::-webkit-scrollbar {
+  display: none;
 }
 
 .features_box .dash {
   font-size: 1.2em;
-  margin: 0.2em ;
+  margin: 0.2em;
   margin-top: 36px;
+  min-width: 40px;
 }
-
 
 .feature_box_item {
   /* border: 2px solid red; */
-  /* width: 170px; */
-  width: 17%;
+  min-width: 168px;
+  width: 166px;
+  height: 200px;
+  /* width: 17%; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -376,7 +397,7 @@ span {
 .item_right_box {
   /* border: 2px solid red; */
   height: 100%;
-  
+
   flex: 1;
   padding: 2rem 5rem;
   display: flex;
@@ -440,6 +461,7 @@ input[type="number"] {
 }
 .contact_page_container p {
   margin-top: 1rem;
+  font-size: 0.9rem;
 }
 form {
   width: 100%;
@@ -504,7 +526,7 @@ input:focus {
 footer {
   /* height: 50vh; */
   /* border: 2px solid red; */
-  padding: 5% 10%;
+  padding: 5% 8%;
   background-color: #041334;
   display: flex;
   /* align-items: center; */
@@ -569,8 +591,16 @@ footer {
 @media only screen and (max-width: 1024px) {
   /* FOR HOMEPAGESECTION */
 
+  /* utility */
+  .padding_left {
+    padding-left: 10%;
+  }
+
+  /* utility closed */
+
   .navbar {
     font-size: 1.2rem;
+    padding: 0% 5%;
   }
   .navbar_left {
     flex: 0.5;
@@ -602,7 +632,9 @@ footer {
 
   .hero_container p {
     margin-top: 0.5rem;
-    width: 70%;
+    width: 84%;
+
+    padding: 1% 0% 1% 10%;
   }
   .hero_container h1 {
     margin-top: 2rem;
@@ -611,7 +643,7 @@ footer {
   }
 
   .hero_btn_container {
-    width: 55%;
+    width: 95%;
     /* font-size: 1.2rem; */
     /* flex-wrap: wrap; */
   }
@@ -646,14 +678,14 @@ footer {
 @media only screen and (max-width: 768px) {
   /* utility */
   .padding_left {
-    padding-left: 5rem;
+    padding-left: 10%;
   }
 
   /* utility closed */
 
   .navbar {
     font-size: 1rem;
-    padding: 0rem 3rem;
+    padding: 0% 5%;
   }
 
   /* FOR HERO CONTAINER */
@@ -665,6 +697,7 @@ footer {
   .hero_container p {
     margin-top: 0.5rem;
     width: 80%;
+    padding: 1% 0% 1% 10%;
   }
   .hero_container h1 {
     margin-top: 2rem;
@@ -673,11 +706,14 @@ footer {
   }
 
   .hero_btn_container {
-    width: 55%;
+    width: 95%;
     /* font-size: 1.2rem; */
   }
 }
 
+@media only screen and (max-width: 700px) {
+
+}
 @media only screen and (max-width: 500px) {
   /* utility */
   .padding_left {
@@ -689,6 +725,23 @@ footer {
   .navbar {
     font-size: 1rem;
   }
+  .menubar {
+    display: block;
+  }
+  .menubar img{
+    height: 2rem;
+  }
+
+  .navbar_left {
+    display: none;
+  }
+  .navbar_middle {
+    display: none;
+  }
+
+  /* .navbar_right {
+    display: none;
+  } */
 
   /* FOR HERO CONTAINER */
 
