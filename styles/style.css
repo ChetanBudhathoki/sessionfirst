@@ -542,6 +542,12 @@ footer {
 }
 /* MEDIAQUERIES */
 
+@media only screen and (min-width: 1900px) {
+.features_box{
+  justify-content: center;
+}
+}
+
 @media only screen and (max-width: 1024px) {
   /* FOR HOMEPAGESECTION */
 
