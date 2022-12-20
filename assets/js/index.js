@@ -6,20 +6,29 @@ let position = -80;
 // selectors
 
 const menu = document.querySelector(".menubar");
-const cancelmenu=document.querySelector(".menucancel");
 const dropDownContainer = document.querySelector(".dropdown_container");
+
+
+//html element creation 
+const menuBtn=document.createElement("img");
+menuBtn.classList.add('menu_icon');
+menuBtn.src="./assets/images/menu.svg";
+menu.appendChild(menuBtn);
+
 
 // eventlisteners
 
 menu.addEventListener("click", (e) => {
   e.preventDefault();
+  e.stopPropagation();
+  console.log(e.target);
   console.log("hellow there");
-
+  isDrawerOpen?menuBtn.src="./assets/images/menu.svg":menuBtn.src="./assets/images/cancelmenu.svg";
   isDrawerOpen = !isDrawerOpen;
   let test = setInterval(() => {
     slideDrawer();
     dropDownContainer.style.right = position + "vw";
-    console.log("POSITON is :", position);
+    // console.log("POSITON is :", position);
 
     if (position >= 0 || position <= -80) {
       clearInterval(test);
@@ -39,3 +48,18 @@ const slideDrawer = () => {
     position -= 1;
   }
 };
+
+
+
+window.onscroll = function() {myFunction()};
+
+var navbar = document.querySelector(".navbar");
+var sticky = navbar.offsetHeight;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
