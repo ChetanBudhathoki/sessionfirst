@@ -342,7 +342,7 @@ span {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8% 10%;
+  padding: 3rem 10%;
 }
 .feature_page_container {
   width: 100%;
@@ -402,6 +402,7 @@ span {
   align-items: center;
   flex-wrap: wrap;
   background-color: var(--greyshade);
+  padding: 3rem 0rem;
 }
 .item_left_box {
   flex: 1.2;
@@ -461,7 +462,7 @@ input[type="number"] {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5rem 0rem;
+  padding: 3rem 0rem;
 }
 .contact_page_container {
   background-color: var(--primary_color);
@@ -540,7 +541,7 @@ input:focus {
 /* STYLING FOR FOOTER SECTION */
 
 footer {
-  padding: 5% 8%;
+  padding: 3rem 8%;
   background-color: #041334;
   display: flex;
   justify-content: space-around;
@@ -674,7 +675,8 @@ footer {
   }
 
   .cards {
-    width: 49%;
+    width: 48%;
+    margin: 4% 0% 0% 0%;
   }
   .card_btn .btn_small {
     min-width: 130px;
@@ -796,7 +798,7 @@ footer {
 
   /* FOR FOOTER PAGE */
   footer {
-    padding: 5% 10%;
+    padding: 3rem 10%;
   }
   .footer_child {
     width: 100%;
@@ -831,7 +833,7 @@ footer {
   }
   .cards {
     width: 100%;
-    margin-top: 2%;
+    margin-top: 5%;
   }
 
   /* FOR FOOTER */
